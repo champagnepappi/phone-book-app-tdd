@@ -7,3 +7,8 @@ class PhonebookTestCase(unittest.TestCase):
         result = contact.add_contact("0712351423")
         self.assertEqual(result["info"], "Contact added")
 
+    def test_delete_contact(self):
+        contact = Contact()
+        result = contact.delete_contact("1873137103")
+        self.assertEqual(result["info"], "Contact deleted")
+

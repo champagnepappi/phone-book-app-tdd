@@ -23,5 +23,10 @@ class PhonebookTestCase(unittest.TestCase):
         result = contact.update_contact("jane", "34251617181", "5463727828")
         self.assertEqual(result, "My new contact is 5463727828")
 
+    def test_view_contacts(self):
+        contact = Contact()
+        result = contact.view_contacts("shaz", "2151853811")
+        self.assertEqual(result, "Contact for shaz is 2151853811")
+
 
 

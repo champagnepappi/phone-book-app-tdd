@@ -18,3 +18,10 @@ class PhonebookTestCase(unittest.TestCase):
         result = contact.delete_contact("jane", "1873137103")
         self.assertEqual(result["info"], "Contact deleted")
 
+    def test_update_contact(self):
+        contact = Contact()
+        contact.update_contact("jane", "34251617181", "5463727828")
+        self.assertEqual(contact["jane"], "5463727828")
+
+
+

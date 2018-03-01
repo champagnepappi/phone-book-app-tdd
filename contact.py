@@ -16,3 +16,7 @@ class Contact(object):
         self.number = number2
         self.contact[name] = number2
         return "My new contact is {}".format(number2)
+
+    def view_contacts(self, name, number):
+        self.contact[name] = number
+        return "Contact for {} is {}".format(name, number)

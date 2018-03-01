@@ -7,6 +7,11 @@ class PhonebookTestCase(unittest.TestCase):
         result = contact.add_contact("pete", "0712351423")
         self.assertEqual(result["info"], "Contact added")
 
+    def test_add_contact_with_contact_greater_than_10_digits(self):
+        contact = Contact()
+        result = contact.add_contact("anne", "3414444444444414")
+        self.assertNotEqual(result["info"], "Contact added")
+
     def test_delete_contact(self):
         contact = Contact()
         result = contact.delete_contact("jane", "1873137103")

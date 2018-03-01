@@ -11,3 +11,8 @@ class Contact(object):
     def delete_contact(self, name, number):
         self.contact[name] = number
         return {"info": "Contact deleted"}
+
+    def update_contact(self, name, number, number2):
+        self.number = number2
+        self.contact[name] = number2
+        return "My new contact is {}".format(number2)
